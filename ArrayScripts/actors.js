@@ -67,11 +67,11 @@ function atLeastStartWithA(actors) {
     //going through elements of main array
     for (let i = 0; i < length; i++) {
         //inner loop goes through the array in each element of MAIN array
-        let films = actors[i].films; // hold the array
-        let innerLength = films.length;
+        let films = actors[i].films; // hold the film array; get the propert first
+        let innerLength = films.length; 
         for (let m = 0; m < innerLength; m++) {
             //test each element in the film array
-            let startsA = films[m].substring(0, 1);
+            let startsA = films[m].charAt(0);
             if (startsA == "A") {
                 members[index] = actors[i].name;
             }
@@ -80,10 +80,10 @@ function atLeastStartWithA(actors) {
     return members;
 }
 
-// console.log(find187(academyMembers));
-// console.log();
-// console.log(atLeast3Films(academyMembers));
-// console.log();
-// console.log(startsWithBob(academyMembers));
-// console.log();
+console.log(find187(academyMembers));
+console.log();
+console.log(atLeast3Films(academyMembers));
+console.log();
+console.log(startsWithBob(academyMembers));
+console.log();
 console.log(atLeastStartWithA(academyMembers));
